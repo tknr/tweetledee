@@ -1,11 +1,11 @@
 <?php
 
 // Configure tweetledee with environment variables.
-$my_consumer_key        = getenv('TWEETLEDEE_CONSUMER_KEY');
-$my_consumer_secret     = getenv('TWEETLEDEE_CONSUMER_SECRET');
-$my_access_token        = getenv('TWEETLEDEE_ACCESS_TOKEN');
-$my_access_token_secret = getenv('TWEETLEDEE_ACCESS_TOKEN_SECRET');
-$my_domain              = getenv('TWEETLEDEE_DOMAIN');
+//$my_consumer_key        = getenv('TWEETLEDEE_CONSUMER_KEY');
+//$my_consumer_secret     = getenv('TWEETLEDEE_CONSUMER_SECRET');
+//$my_access_token        = getenv('TWEETLEDEE_ACCESS_TOKEN');
+//$my_access_token_secret = getenv('TWEETLEDEE_ACCESS_TOKEN_SECRET');
+//$my_domain              = getenv('TWEETLEDEE_DOMAIN');
 
 
 /*
@@ -34,3 +34,10 @@ $my_domain              = getenv('TWEETLEDEE_DOMAIN');
 // $my_access_token        = 'ENTER YOUR ACCESS TOKEN';
 // $my_access_token_secret = 'ENTER YOUR ACCESS TOKEN SECRET';
 // $my_domain              = 'ENTER YOUR DOMAIN NAME';
+
+$ini_array = parse_ini_file("/etc/php.d/99-other.ini", true);
+$my_consumer_key        = $ini_array['twitter']['consumer_key'];
+$my_consumer_secret     = $ini_array['twitter']['consumer_secret'];
+$my_access_token        = $ini_array['twitter']['access_token'];
+$my_access_token_secret = $ini_array['twitter']['access_token_secret'];
+$my_domain              = $ini_array['root_url'];
