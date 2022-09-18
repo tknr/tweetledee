@@ -36,8 +36,8 @@
 // $my_domain              = 'ENTER YOUR DOMAIN NAME';
 
 $ini_array = parse_ini_file("/etc/php.d/99-other.ini", true);
-$my_consumer_key        = $ini_array['twitter']['consumer_key'];
-$my_consumer_secret     = $ini_array['twitter']['consumer_secret'];
-$my_access_token        = $ini_array['twitter']['access_token'];
-$my_access_token_secret = $ini_array['twitter']['access_token_secret'];
+$my_consumer_key        = $ini_array['tweetledee']['consumer_key'];
+$my_consumer_secret     = $ini_array['tweetledee']['consumer_secret'];
+$my_access_token        = $ini_array['tweetledee']['access_token'];
+$my_access_token_secret = $ini_array['tweetledee']['access_token_secret'];
 $my_domain              = $ini_array['root_url'];
